@@ -71,6 +71,20 @@ Ne jamais enregistrer les tokens dans le code.
 - Pipeline GitHub Actions exécuté avec succès.
 - Plusieurs versions du modèle visibles dans Unity Catalog.
 
+## Model Serving
+
+La version 10 du modèle workspace.default.irisrfmodel est déployée
+sur l’endpoint iris-rf-endpoint, avec un calcul CPU et Scale to zero activé.
+
+Une requête contenant les mesures de trois fleurs a été envoyée
+depuis l’interface Query endpoint.
+
+Réponse obtenue : {"predictions": [0, 1, 2]}, correspondant
+respectivement à Setosa, Versicolor et Virginica.
+
+L’endpoint sert la version 10. Les nouvelles versions enregistrées
+par le pipeline ne remplacent pas automatiquement cette version servie.
+
 ## Limites
 
 Le pipeline entraîne et enregistre le modèle.
